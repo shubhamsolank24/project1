@@ -1,16 +1,17 @@
 """
 Read file into texts and calls.
 It's ok if you don't understand how to read files.
-"""import csv
+"""
+import csv
 with open('texts.csv', 'r') as f:
     reader = csv.reader(f)
-    sending, receiving, timestamp = list(reader)[0]
-    print(f'First record of texts, {sending} texts {receiving} at time {timestamp}')
+    incoming, answering, duration = list(reader)[0]
+    print(f'First record of texts, {incoming} texts {answering} at time {duration}')
 
 with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
-    calling, receiving, timestamp, seconds = list(reader)[-1]
-    print(f'Last record of calls, {calling} calls {receiving} at time {timestamp}, lasting {seconds} seconds')
+    incoming, answering, duration, seconds = list(reader)[-1]
+    print(f'Last record of calls, {incoming} calls {answering} at time {duration}, lasting {seconds} seconds')
     
 
 """
