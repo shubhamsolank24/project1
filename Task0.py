@@ -5,13 +5,13 @@ It's ok if you don't understand how to read files.
 import csv
 with open('texts.csv', 'r') as f:
     reader = csv.reader(f)
-    incoming, answering, duration = list(reader)[0]
-    print(f'First record of texts, {incoming} texts {answering} at time {duration}')
+    incoming, answering, timestamp = list(reader)[0]
+    print(f'First record of texts, {incoming} texts {answering} at time {timestamp}')
 
 with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
-    incoming, answering, duration, seconds = list(reader)[-1]
-    print(f'Last record of calls, {incoming} calls {answering} at time {duration}, lasting {seconds} seconds')
+    incoming, answering, timestamp, seconds = list(reader)[-1]
+    print(f'Last record of calls, {incoming} calls {answering} at time {timestamp}, lasting {seconds} seconds')
     
 
 """
