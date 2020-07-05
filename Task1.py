@@ -10,6 +10,18 @@ with open('texts.csv', 'r') as f:
 with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
     calls = list(reader)
+    
+    phonenum = set()
+
+for numbers in  texts:
+    phonenum.add(numbers[0])
+    phonenum.add(numbers[1])
+for numbers in calls:
+    phonenum.add(numbers[0])
+    phonenum.add(numbers[1])
+    count =len (phonenum)
+print(f'There are { count } different telephone numbers in the records')
+    
 
 
 """
