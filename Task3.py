@@ -43,3 +43,59 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
+def get_phone_type(phone):
+    if phone.startswith('(080)'):
+        return 'bangalore'
+    elif phone.startswith('140'):
+        return 'telemarketer'
+    elif phone.startswith('(0'):
+        return 'fixed_lines'
+    else:
+        return 'mobile_number'
+
+def bangalore_receiver_codes(calls):
+    receiver_list = []
+    codes = []  
+    
+    for call in calls:
+        caller, receiver = call[0], call[1]
+        caller_type = get_phone_type(caller)
+
+        if caller_type == 'bangalore':
+            receiver_list.append(receiver)
+          
+    for phone in receiver_list:
+        if get_phone_type(phone) == 'bangalore': 
+            codes.append(phone[1:4])
+        elif get_phone_type(phone) == 'telemarketer': 
+            codes.append(phone[:3])
+        elif get_phone_type(phone) == 'fixed_lines': 
+            codes.append(phone.split('(', 1)[1].split(')')[0])
+        else:
+            codes.append(phone[:4]) # mobile: first 4 digits
+    
+    print("The numbers called by people in Bangalore have codes:\n")
+    print('\n'.join(sorted(set(codes))))
+
+bangalore_receiver_codes(calls)
+
+def fixed_percent(calls):
+    from_fixed = 0         
+    from_fixed_to_fixed = 0
+
+    for call in calls:
+        caller, receiver = call[0], call[1]
+        caller_type = get_phone_type(caller)
+        receiver_type = get_phone_type(receiver)
+
+        if caller_type == 'bangalore':
+            from_fixed += 1             # counter 
+
+        if caller_type == 'bangalore' and receiver_type == 'bangalore': 
+            from_fixed_to_fixed += 1   # counter 
+    
+    answer = from_fixed_to_fixed / from_fixed * 100
+    percent = round(answer, 2) 
+    print(percent, "percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.\n")
+
+fixed_percent(calls)
