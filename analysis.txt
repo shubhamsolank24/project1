@@ -24,3 +24,21 @@ b.  Print percentage of calls:
     9. multiplication statement = O(NK)                     *cite: 1, 2
     10. division and round statement = O(1) * 2 
     11. result = O(1) * 12 + O(N) * 3 + O(NK) = O(NK)  
+
+
+Task4:
+a. Print telemarketers list:
+    1. assign two set variables = O(1) * 2
+    2. for loop over calls list = O(N)
+    3. assign two call list variables = O(1) * 4
+    4. add to two sets = O(1) * 2 
+    5. for loop over texts list = O(M)
+    6. assign two list variables = O(1) * 2 
+    7. add to two sets = O(1) * 2
+    8. assign difference variable = O(1)
+    9. subtract two sets =  O(len(N) + len(M))              *cite: 1
+    10. assign result variable = O(1)
+    11. sort set = O(N log N)
+    l2. result: O(1) * 14 + O(N) + O(M) + O(N log N) + O(len(N) + len(M)) 
+                = O(N * M) + O(N log N) + O(len(N) + len(M))
+                = O(N log N)
