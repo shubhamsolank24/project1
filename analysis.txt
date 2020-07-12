@@ -1,0 +1,26 @@
+Task3:
+a. Print unique area codes:
+    1. if statement = O(N) 
+    2. assign two list variables = O(1) * 2
+    3. for loop iterate over call list = O(N) 
+    4. assign four list variables = O(1) * 4
+    5. if statement = O(N) 
+    6. add to receiver list = O(1)
+    7. for loop iterate over receiver list = O(M)
+    8. if statement = O(M)
+    9. add to code list = O(1)
+    10. sort list = O(N log N)   
+    12. result: O(N) * 3 + O(1) * 8 + O(M) * 2 = O(N log N * M) = O(N log N)
+
+b.  Print percentage of calls: 
+    1. assign two lists variables = O(1) * 2
+    2. for loop iterate over call list = O(N)
+    3. assign four list variables = O(1) * 4
+    4. if statement = O(N) 
+    5. add to fixed list = O(1)
+    6. if statement = O(N)
+    7. add to from fixed list = O(1)
+    8. assign two variables = O(1) * 2
+    9. multiplication statement = O(NK)                     *cite: 1, 2
+    10. division and round statement = O(1) * 2 
+    11. result = O(1) * 12 + O(N) * 3 + O(NK) = O(NK)  
