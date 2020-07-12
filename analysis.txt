@@ -1,3 +1,18 @@
+Task 0:
+find first record order :  O(1)
+find last record order :  O(1)
+
+
+------------------
+Task 1:
+complexity or order :O(n)
+
+
+Task 2:
+complexity or order :O(n)
+
+
+
 Task3:
 a. Print unique area codes:
     1. if statement = O(N) 
@@ -10,7 +25,7 @@ a. Print unique area codes:
     8. if statement = O(M)
     9. add to code list = O(1)
     10. sort list = O(N log N)   
-    12. result: O(N) * 3 + O(1) * 8 + O(M) * 2 = O(N log N * M) = O(N log N)
+    12. complexity or order: O(N) * 3 + O(1) * 8 + O(M) * 2 = O(N log N * M) = O(N log N)
 
 b.  Print percentage of calls: 
     1. assign two lists variables = O(1) * 2
@@ -23,7 +38,7 @@ b.  Print percentage of calls:
     8. assign two variables = O(1) * 2
     9. multiplication statement = O(NK)                     *cite: 1, 2
     10. division and round statement = O(1) * 2 
-    11. result = O(1) * 12 + O(N) * 3 + O(NK) = O(NK)  
+    11.  complexity or order = O(1) * 12 + O(N) * 3 + O(NK) = O(NK)  
 
 
 Task4:
@@ -39,6 +54,6 @@ a. Print telemarketers list:
     9. subtract two sets =  O(len(N) + len(M))              *cite: 1
     10. assign result variable = O(1)
     11. sort set = O(N log N)
-    l2. result: O(1) * 14 + O(N) + O(M) + O(N log N) + O(len(N) + len(M)) 
+    l2. complexity or order: O(1) * 14 + O(N) + O(M) + O(N log N) + O(len(N) + len(M)) 
                 = O(N * M) + O(N log N) + O(len(N) + len(M))
                 = O(N log N)
