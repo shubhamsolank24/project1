@@ -24,4 +24,25 @@ Print a message:
 <list of numbers>
 The list of numbers should be print out one per line in lexicographic order with no duplicates.
 """
+def potential_telemarketers(calls, texts): 
+    qualified_telemarketers_set = set()
+    non_qualified_num_set = set()
+    
+    for call in calls:
+        outgoing_calls, incoming_calls = call[0], call[1] 
+        qualified_telemarketers_set.add(outgoing_calls)
+        non_qualified_num_set.add(incoming_calls)
+            
+    for text in texts:
+        outgoing_text, incoming_text = text[0], text[1] 
+        non_qualified_num_set.add(outgoing_text)
+        non_qualified_num_set.add(incoming_text)
+ 
+    difference = qualified_telemarketers_set - non_qualified_num_set  
+    result = sorted(difference)
+
+    print("These numbers could be telemarketers: \n")
+    print('\n'.join(result))
+    
+potential_telemarketers(calls, texts)
 
